@@ -7,7 +7,7 @@ const Tickets = () => {
   const [tickets, setTickets] = useState([])
 
   useEffect(() => {
-    fetch(`http://localhost:3001/tickets`)
+    fetch(`https://dashboard-api-c2ql.onrender.com/tickets`)
     .then((res) => res.json())
     .then(data => {
         console.log(data);

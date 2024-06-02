@@ -25,7 +25,7 @@ const Assets = () => {
 
     // Get data from api (read)
     useEffect(() => {
-        fetch(`http://localhost:3001/motors`)
+        fetch(`https://dashboard-api-c2ql.onrender.com/motors`)
         .then((res) => res.json())
         .then(data => {
             console.log(data);
@@ -38,7 +38,7 @@ const Assets = () => {
         e.preventDefault();
         
         if(modelNumber && name && status && location && Manufacturer ) {
-            fetch(`http://localhost:3001/motors/`, 
+            fetch(`https://dashboard-api-c2ql.onrender.com/motors/`, 
                 {
                     method : "POST",
                     body : JSON.stringify({
@@ -120,7 +120,7 @@ const Assets = () => {
     // delete an asset
 
     const deleteAsset = (id) => {
-        fetch(`http://localhost:3001/motors/${id}`, 
+        fetch(`https://dashboard-api-c2ql.onrender.com/motors/${id}`, 
                 {
                     method : "DELETE",
                 }

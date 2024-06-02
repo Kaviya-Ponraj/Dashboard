@@ -1,0 +1,7 @@
+mongodb credentials
+
+username : kaviyaponraj01
+password : KAEVD1zDlk3HwPQv
+
+connection url : mongodb+srv://kaviyaponraj01:KAEVD1zDlk3HwPQv@motor.d6kvtcb.mongodb.net/?retryWrites=true&w=majority&appName=motor
+uri deployment : mongodb+srv://kaviyaponraj01:KAEVD1zDlk3HwPQv@motor.d6kvtcb.mongodb.net/motor?retryWrites=true&w=majority&appName=motor

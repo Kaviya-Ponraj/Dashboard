@@ -8,7 +8,7 @@ const Overview = () => {
     const [dashboard, setDashboard] = useState([])
 
     useEffect(() => {
-        fetch(`http://localhost:3001/motors`)
+        fetch(`https://dashboard-api-c2ql.onrender.com/motors`)
         .then((res) => res.json())
         .then(data => {
             console.log(data);

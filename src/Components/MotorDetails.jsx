@@ -12,7 +12,7 @@ const MotorDetails = () => {
     const navigate = useNavigate()
 
     useEffect(() => {
-        fetch(`http://localhost:3001/motors/${id}`)
+        fetch(`https://dashboard-api-c2ql.onrender.com/motors/${id}`)
         .then((res) => res.json())
         .then(data => {
             console.log(data);
