@@ -18,7 +18,7 @@ const Overview = () => {
   return (
     <table className=" table mx-6 my-6">
         <thead className="mb-2">
-        <tr>
+        <tr className="text-center  border-b border-gray-950 hover:bg-gray-300 bg-gray-200 last:border-b-0">
             <th>Name</th>
             <th>Location</th>
             {/* <th>Manufacturer</th> */}

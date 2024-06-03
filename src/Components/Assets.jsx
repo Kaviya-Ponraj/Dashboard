@@ -156,23 +156,23 @@ const Assets = () => {
                 <form >
                     <div className="m-3">
                     <label htmlFor="modelnum">Model No :  </label>
-                    <input placeholder="Enter Model Number..." type="text" id="modelnum" value={modelNumber} onChange={(e) => setModelNumber(e.target.value)}/>
+                    <input placeholder="Enter Model Number..." className="w-100 px-2 py-1 rounded outline-none" type="text" id="modelnum" value={modelNumber} onChange={(e) => setModelNumber(e.target.value)}/>
                     </div>
                     <div className="m-3">
                     <label htmlFor="modelnum">Name :  </label>
-                    <input placeholder="Enter THe Asset Name..." type="text" id="modelnum" value={name} onChange={(e) => setName(e.target.value)}/>
+                    <input placeholder="Enter THe Asset Name..." className="w-100 px-2 py-1 rounded outline-none" type="text" id="modelnum" value={name} onChange={(e) => setName(e.target.value)}/>
                     </div>
                     <div className="m-3">
                     <label htmlFor="modelnum">Status :  </label>
-                    <input placeholder="Enter the status" type="text" id="modelnum" value={status} onChange={(e) => setStatus(e.target.value)}/>
+                    <input placeholder="Enter the status" className="w-100 px-2 py-1 rounded outline-none" type="text" id="modelnum" value={status} onChange={(e) => setStatus(e.target.value)}/>
                     </div>
                     <div className="m-3">
                     <label htmlFor="modelnum">Location :  </label>
-                    <input placeholder="Enter the location" type="text" id="modelnum" value={location} onChange={(e) => setLocation(e.target.value)}/>
+                    <input placeholder="Enter the location" className="w-100 px-2 py-1 rounded outline-none" type="text" id="modelnum" value={location} onChange={(e) => setLocation(e.target.value)}/>
                     </div>
                     <div className="m-3">
                     <label htmlFor="modelnum">Manufacturer :  </label>
-                    <input placeholder="Enter the manufacturer name..." type="text" id="modelnum" value={Manufacturer} onChange={(e) => setManufacturer(e.target.value)}/>
+                    <input placeholder="Enter the manufacturer name..." className="w-100 px-2 py-1 rounded outline-none" type="text" id="modelnum" value={Manufacturer} onChange={(e) => setManufacturer(e.target.value)}/>
                     </div>
                     <button type="submit" onClick={submit} className="bg-green-600 ml-6 rounded text-white px-3 z-10 py-1">Create Motor</button>
                     <button onClick={() => setShowModal(false)} className="rounded text-white px-3 z-10 py-1 bg-red-600 ml-4">Close</button>
@@ -184,7 +184,7 @@ const Assets = () => {
      
        <table className=" table mx-6 my-6">
         <thead className="mb-6">
-        <tr>
+        <tr className="text-center  border-b border-gray-950 hover:bg-gray-300 bg-gray-200 last:border-b-0">
             <th>Model No</th>
             <th>Name</th>
             <th>Status</th>
