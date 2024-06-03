@@ -152,7 +152,7 @@ const Assets = () => {
 
         {
             showModal ? (<div>
-            <div className="w-full h-full bg-gray-400 mt-3 rounded px-10 py-4">
+            <div className="w-full h-full bg-gray-400 mt-3 rounded px-1 md:px-10 py-4">
                 <form >
                     <div className="m-3">
                     <label htmlFor="modelnum">Model No :  </label>
@@ -185,35 +185,35 @@ const Assets = () => {
        <table className=" table mx-6 my-6">
         <thead className="mb-6">
         <tr className="text-center  border-b border-gray-950 hover:bg-gray-300 bg-gray-200 last:border-b-0">
-            <th>Model No</th>
-            <th>Name</th>
-            <th>Status</th>
-            <th>Location</th>
-            <th>Manufacturer</th>
+            <th className="md:table-cell hidden">Model No</th>
+            <th >Name</th>
+            <th >Status</th>
+            <th className="md:table-cell hidden">Location</th>
+            <th className="lg:table-cell hidden">Manufacturer</th>
             <th>Action</th>
         </tr>
         </thead>
         <tbody>
         {     dashboard.map((data) => {
                 return <tr key={data._id} className="text-center border-b border-gray-950 hover:bg-gray-300 bg-gray-200 last:border-b-0">
-                    <td  className="py-2 text-center capitalize px-3 text-sm" >
+                    <td  className="md:table-cell hidden py-2 text-center capitalize px-3 text-sm" >
                         {data.modelNumber}
                     </td>
-                    <td className="py-2 text-center capitalize px-3 text-sm" >
+                    <td className="lg:py-2 text-center capitalize lg:px-3 text-sm" >
                         {data.name}
                     </td>
-                    <td className="py-2 text-center capitalize px-3 text-sm" >
+                    <td className="lg:py-2 text-center capitalize lg:px-3 text-sm" >
                        {data.status}
                     </td>
-                    <td className="py-2 text-center capitalize px-3 text-sm" >
+                    <td className="md:table-cell hidden lg:py-2 text-center capitalize lg:px-3 text-sm" >
                         {data.location}
                     </td>
-                    <td className="py-2 text-center capitalize px-3 text-sm" >
+                    <td className="lg:table-cell hidden lg:py-2 text-center capitalize lg:px-3 text-sm" >
                         {data.Manufacturer}
                     </td>
-                    <td className="py-2 text-center capitalize px-2 text-sm" >
-                        <button className="bg-gray-900 px-3 text-white rounded py-2 mx-2"> <NavLink to={`/edit/${data._id}`}> Edit </NavLink></button>
-                        <button className="bg-red-600 px-3 text-white rounded py-2 mx-2" onClick={() => {deleteAsset(data._id)}}>Delete</button>
+                    <td className="lg:py-2 text-center capitalize lg:px-2 text-sm" >
+                        <button className="bg-gray-900 px-1.5 py-0.5 my-0.5 md:px-3 text-white rounded md:py-2 mx-2"> <NavLink to={`/edit/${data._id}`}> Edit </NavLink></button>
+                        <button className="bg-red-600 px-1.5 py-0.5 my-0.5 md:px-3 text-white rounded md:py-2 mx-2" onClick={() => {deleteAsset(data._id)}}>Delete</button>
                     </td>
                 </tr>
                

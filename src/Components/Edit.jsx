@@ -73,7 +73,7 @@ const Edit = () => {
 
   return (
     <div className="flex items-center justify-center mt-10">
-    <form className="bg-gray-700 h-1/5 w-1/2 rounded py-6 px-10" >
+    <form className="bg-gray-700 h-1/5 w-full ml-12 lg:w-1/2 rounded py-6 px-10" >
         <h2 className="justify-center text-white font-bold text-center">Edit Asset</h2>
         <div className="m-5">
             <label htmlFor="modelNumber" className="text-white">Model No : </label>
@@ -95,8 +95,8 @@ const Edit = () => {
             <label htmlFor="Manufacturer" className="text-white">Manufacturer : </label>
             <input type="text" placeholder="Enter your name" value={asset.Manufacturer} onChange={inputChangeHandler} name="Manufacturer" id="Manufacturer" className="rounded border-none outline-none px-2 py-1"/>
         </div>
-        <button type="submit" className="bg-green-600 rounded px-4 py-2 mx-2 text-white" onClick={submitForm}>Save Changes</button>
-        <button className="bg-red-600 rounded px-4 py-2 text-white mx-2" onClick={() => navigate("/assets")}>Cancel</button>
+        <button type="submit" className="bg-green-600 rounded px-4 py-2 mx-2 text-white my-2" onClick={submitForm}>Save Changes</button>
+        <button className="bg-red-600 rounded px-4 py-2 text-white mx-2 my-2" onClick={() => navigate("/assets")}>Cancel</button>
     </form>
     </div>
   )

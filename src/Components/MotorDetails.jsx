@@ -22,15 +22,16 @@ const MotorDetails = () => {
     
     console.log(data)
   return (
-    <div className="bg-gray-800 px-10 py-10 ml-40 mt-4 w-1/2 rounded text-white">
+    <div className="bg-gray-800 px-10 py-10 mx-10 lg:ml-40 mt-4 w-full mb-4 lg:w-1/2 rounded text-white">
         <div className="flex">
          <button className="bg-blue-500 rounded px-4 my-2  text-white" onClick={() => navigate("/")}>Go Back</button>
-        <h2 className="text-xl font-bold text-center mx-4 mb-4">Motor Details</h2>
+        
         </div>
   
         
         {data && Object.keys(data).length > 0 && (
     <div className="" key={data._id}>
+        <h2 className="text-xl font-bold text-center mx-4 mb-4">{data.name ? data.name : "Motor Details"} </h2>
         <p className="text-justify">Name : <span className="text-cyan-200"> {data.name ? data.name : "data not found "} </span></p>
         <p className="text-justify">Description : <span className="text-cyan-200"> {data.description ? data.description : "data not found"} </span></p>
         <p className="text-justify">Location : <span className="text-cyan-200"> {data.location ? data.location : "data not found"} </span> </p>

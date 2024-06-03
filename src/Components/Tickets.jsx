@@ -120,7 +120,7 @@ const submit = (e) => {
             {/* 
             <input placeholder="Enter the status" className="w-100 px-2 py-1 rounded outline-none" type="text" id="modelnum" /> */}
             <label htmlFor="status">Status :  </label>
-            <select name="satus" id="status" value={status} onChange={(e) => setStatus(e.target.value)}>Status :
+            <select name="satus" id="status" onChange={(e) => setStatus(e.target.value)}>Status :
             <option value="closed">Closed</option>
             <option value="open">Open</option>
             <option value="in_progress">In_progress</option>
@@ -138,7 +138,7 @@ const submit = (e) => {
             
             <textarea 
             placeholder="Enter the Issue description" 
-            className="w-100 h-7 px-2 py-1 rounded outline-none"
+            className="w-3/4 md:w-100 h-7 px-2 py-1 rounded outline-none"
             id="modelnum" 
             value={Issue_Description} 
             onChange={(e) => setIssue_Description(e.target.value)}
@@ -158,10 +158,10 @@ const submit = (e) => {
       <thead className="mb-2">
         <tr className="text-center  border-b border-gray-950 hover:bg-gray-300 bg-gray-200 last:border-b-0">
           <th>Asset ID</th>
-          <th>Date Raised</th>
+          <th className="md:table-cell hidden">Date Raised</th>
           <th>Status</th>
-          <th>Ticket ID</th>
-          <th>Issue Description</th>
+          <th className="">Ticket ID</th>
+          <th className="md:table-cell hidden">Issue Description</th>
           <th>Action</th>
         </tr>
       </thead>
@@ -170,10 +170,10 @@ const submit = (e) => {
           tickets.map((data) => {
           return  <tr key={data._id} className="text-center  border-b border-gray-950 hover:bg-gray-300 bg-gray-200 last:border-b-0">
               <td className="py-2 text-center capitalize px-3 text-sm">{data.Asset_ID}</td>
-              <td className="py-2 text-center capitalize px-3 text-sm">{data.Date_Raised}</td>
+              <td className="md:table-cell hidden py-2 text-center capitalize px-3 text-sm">{data.Date_Raised}</td>
               <td className="py-2 text-center capitalize px-3 text-sm">{data.Status}</td>
-              <td className="py-2 text-center capitalize px-3 text-sm">{data.Ticket_ID}</td>
-              <td className="py-2  capitalize px-3 text-sm text-justify">{data.Issue_Description}</td>
+              <td className=" py-2 text-center capitalize px-3 text-sm">{data.Ticket_ID}</td>
+              <td className="md:table-cell hidden py-2  capitalize px-3 text-sm text-justify">{data.Issue_Description}</td>
               <td>
                 <button className="bg-red-600 text-white px-3 py-1 rounded" onClick={() => {removeData(data._id)}}>Remove</button>
               </td>
